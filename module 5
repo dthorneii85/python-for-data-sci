@@ -1,0 +1,7 @@
+first = "Breaking Bad"
+second = "Love The Code"
+
+print ("first[0:8]: ", first[0:8])
+print ("second[5:14]: ", second[5:14])
+print ("first[9:12]: ", first[9:12])
+print ("second[0:4]: ", second[0:4])
