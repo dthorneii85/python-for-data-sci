@@ -1,0 +1,33 @@
+import random
+def gameOfSeven():
+    DieOne = 0
+    DieTwo = 0
+    Total = 0
+    Wins = 0
+    Losses = 0
+    Rolls = 1
+    while Rolls != 11:
+        print("Try to roll a 7, if you do you WIN!")
+        print("If you roll a double you get another chance!")
+        print("If you dont you LOOSE!")
+        DieOne = rollofdie()
+        print("Die One Total: " + str(DieOne))
+        DieTwo = rollofdie()
+        print("Die Two Total: " + str(DieTwo))
+        Total = DieOne + DieTwo
+        print("Total: " + str(Total))
+        if DieOne + DieTwo == 7:
+            Wins = Wins + 1
+            print("WIN\n")
+        elif DieOne == DieTwo:
+            print("ROLL AGAIN\n")
+        else:
+            Losses = Losses + 1
+            print("YOU LOOSE\n")
+        Rolls = Rolls + 1
+    print("Wins: " + str(Wins))
+    print("Losses: " + str(Losses))
+def rollofdie():
+    diceRoll = random.randint(1, 6)
+    return diceRoll
+gameOfSeven()
